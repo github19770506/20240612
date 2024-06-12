@@ -9,9 +9,26 @@
             content:"";position: fixed;
             left:0;right:0;top:0;bottom:0;
             background-color: rgba(0,0,0,.5);}
+        #popup{background-color: #fff;
+            max-width: 400px;
+            width: 80vw;
+            padding: 200px 0;
+            position: absolute;
+            top: 50%;left:50%;text-align: center;
+            transform: translate(-50%,-50%);
+            display: none;
+        }    
+        .popupshow #popup {display: block;}
     </style>
 </head>
 <body class="popupshow">
-    
+    <div id="popup">팝업
+        <button>닫기</button>
+    </div>
+    <script>
+        document.querySelector("#popup button").addEventListener('click',function(){
+            document.body.classList.remove('popupshow')
+        })
+    </script>
 </body>
 </html>
