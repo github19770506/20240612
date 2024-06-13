@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상선택자</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        button {
+            background-color: #fff;
+            padding: 50px 80px;
+            border-radius: 30px;
+            overflow: hidden;
+            font-size: 60px;
+            position: relative;
+        }
+        button::after {
+            content: "";
+            position: absolute;
+            height: 0;
+            background-color: red;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transition: .5s;
+        }
+        button:hover::after{
+            height: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+    <button>클릭</button>
+</body>
+</html>
